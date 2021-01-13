@@ -1,0 +1,79 @@
+@import 'variables';
+@import 'card';
+
+* {
+    margin: 0px;
+    padding: 0px;
+};
+    
+body {
+    background-color: $base-bg-color;
+    font-size: 1em;
+    font-family: $font-family;
+    color: $text-base-color;
+};
+
+.fotterFixed {
+    min-height: 100vh; /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
+    position: relative;/* ←相対位置 */
+    padding-bottom: 60px; /* ←フッターの高さを指定 */
+    box-sizing: border-box;
+    /* ↑ヘッダーやフッターを含むすべての要素の高さ＝min-height:100vhになるように指定 */
+};
+
+header {
+    background-color: #98fb98;
+    margin-bottom: 10px;
+};
+
+footer {
+    position: absolute;/* ←絶対位置 */
+    bottom: 0;/* ←ディスプレイ下部固定*/
+    width: 100%;
+    background-color: #98fb98;
+    text-align: center;
+};
+
+.title {
+    font-size: 40px;
+    text-align: center;
+};
+
+.subtitle {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+};
+
+.search_container{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 100px auto;
+    text-align: center;
+
+  .search_container input[type="text"]{
+    border: 1px solid #999;
+    padding: 6px 5px;
+    border-radius: 20px;
+    height: 2.0em;
+    width: 70%;
+  };
+
+  .search_container input[type="submit"]{
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    border: 1px solid #999;
+    border-radius: 15px;
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    outline : none;
+    display: inline-block;
+    vertical-align: middle;
+  };
+
+  .post {
+    margin: 20px;
+  };
+};
