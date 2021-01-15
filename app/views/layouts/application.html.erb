@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ComparisonApp2</title>
+    <title>ニタク！〜身近なものの比較サイト〜</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
-    <div class="footerFixed">
-      <header>
-        <h1 class="title">ニタク！</h1>
-        <p class="subtitle">身近なものの比較サイト</p> 
-      </header>
+    <header>
+      <h1 class="title">ニタク！</h1>
+      <p class="subtitle">身近なものの比較サイト</p> 
+    </header>
 
-      <%= yield %>
+    <%= yield %>
         
-      <footer>
-        <p>ニタク！</p>
-      </footer>
-
-    </div>
+    <footer>
+      <p>ニタク！</p>
+    </footer>
   </body>
 </html>
