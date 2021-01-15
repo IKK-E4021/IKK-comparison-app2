@@ -1,8 +1,38 @@
-<h2><%= @articles.title %></h2>
-<h2><%= @articles.content %></h2>
-
 <form method="get" action="#" class="search_container">
 <input type="text" size="49" placeholder=" キーワード検索">
 <input class="search" type="submit" value="検索"><br>
 <input class="post" type="submit" value="投稿する">
 </form>
+
+<div class="tabs">
+    <div class="tabs_item active">
+      新着記事
+    </div>
+    <div class="tabs_item">
+      人気記事
+    </div>
+</div>
+
+<% @articles.each do |article| %>
+    <%= link_to article_path(article) do %>
+        <div class="card">
+            <div class="card_content">
+                <div class="card_title">
+                        <%= article.object_left %> vs <%= article.object_right %>
+                </div>
+                <div class="card_heart">
+                    <%= image_tag 'heart.svg' %>
+                    <span>23</span>
+                </div>
+                <div class="card_detail">
+                    <%= image_tag 'default-avatar.png' %>
+                    <div>
+                        <p>shinta6348</p>
+                        <p>2021/1/11</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+<% end %>
+

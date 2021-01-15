@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'card';
+@import 'article';
 
 * {
     margin: 0px;
@@ -13,24 +14,20 @@ body {
     color: $text-base-color;
 };
 
-.fotterFixed {
-    min-height: 100vh; /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
-    position: relative;/* ←相対位置 */
-    padding-bottom: 60px; /* ←フッターの高さを指定 */
-    box-sizing: border-box;
-    /* ↑ヘッダーやフッターを含むすべての要素の高さ＝min-height:100vhになるように指定 */
+a {
+  text-decoration: none;
+  color: $text-base-color;
 };
 
+
 header {
-    background-color: #98fb98;
+    background-color: $primary-color;
     margin-bottom: 10px;
 };
 
 footer {
-    position: absolute;/* ←絶対位置 */
-    bottom: 0;/* ←ディスプレイ下部固定*/
     width: 100%;
-    background-color: #98fb98;
+    background-color: $primary-color;
     text-align: center;
 };
 
@@ -48,7 +45,7 @@ footer {
 .search_container{
     box-sizing: border-box;
     width: 100%;
-    margin: 100px auto;
+    margin: 40px auto 20px auto;
     text-align: center;
 
   .search_container input[type="text"]{
@@ -73,7 +70,34 @@ footer {
     vertical-align: middle;
   };
 
+  .search {
+    margin: 5px;
+  };
+
   .post {
-    margin: 20px;
+    margin: 10px;
   };
 };
+
+.tabs {
+  display: flex;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  justify-content: space-around;
+
+  &_item {
+    padding: 16px 0px;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+
+    &.active {
+      background-color: $primary-color;
+      color: black;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
