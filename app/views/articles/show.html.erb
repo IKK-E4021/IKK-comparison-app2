@@ -1,97 +1,96 @@
 <div class="article">
 
-  <h2 class="article_title">
-    <div class="article_title_left">
-      <%= @article.object_left %>
-    </div>
-    <div class="article_title_right">
-      <%= @article.object_right %>
-    </div>
-  </h2>
-
-  <div class="article_item">
-    <div class="article_item">
-      <h3 class="article_item_title"><%= @article.item1 %></h3>
-      <div class="article_item_rate">
-        <div class="article_item_rate_left">
-          <h3>aaaaaaaaa</h3>
-        </div>
-        <div class="article_item_rate_right">
-          <h3>bbbbbbbbb</h3>
-        </div>
+    <div class="article_title">
+      <div class="article_title_left">
+        <%= @article.object_left %>
+      </div>
+      <div class="article_title_right">
+        <%= @article.object_right %>
       </div>
     </div>
 
     <div class="article_item">
-      <h3 class="article_item_title"><%= @article.item2 %></h3>
-      <div class="article_item_rate">
-        <div class="article_item_rate_left">
-          <h3>aaaaaaaaa</h3>
-        </div>
-        <div class="article_item_rate_right">
-          <h3>bbbbbbbbb</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="article_item">
-      <h3 class="article_item_title"><%= @article.item3 %></h3>
-      <div class="article_item_rate">
-        <div class="article_item_rate_left">
-          <h3>aaaaaaaaa</h3>
-        </div>
-        <div class="article_item_rate_right">
-          <h3>bbbbbbbbb</h3>
+      <div class="article_item">
+        <h3 class="article_item_title"><%= @article.item1 %></h3>
+        <div class="article_item_rate">
+          <div class="article_item_rate_left">
+            <h3>aaaaaaaaa</h3>
+          </div>
+          <div class="article_item_rate_right">
+            <h3>bbbbbbbbb</h3>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="article_item">
-      <h3 class="article_item_title"><%= @article.item4 %></h3>
-      <div class="article_item_rate">
-        <div class="article_item_rate_left">
-          <h3>aaaaaaaaa</h3>
-        </div>
-        <div class="article_item_rate_right">
-          <h3>bbbbbbbbb</h3>
+      <div class="article_item">
+        <h3 class="article_item_title"><%= @article.item2 %></h3>
+        <div class="article_item_rate">
+          <div class="article_item_rate_left">
+            <h3>aaaaaaaaa</h3>
+          </div>
+          <div class="article_item_rate_right">
+            <h3>bbbbbbbbb</h3>
+          </div>
         </div>
       </div>
+
+      <div class="article_item">
+        <h3 class="article_item_title"><%= @article.item3 %></h3>
+        <div class="article_item_rate">
+          <div class="article_item_rate_left">
+            <h3>aaaaaaaaa</h3>
+          </div>
+          <div class="article_item_rate_right">
+            <h3>bbbbbbbbb</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="article_item">
+        <h3 class="article_item_title"><%= @article.item4 %></h3>
+        <div class="article_item_rate">
+          <div class="article_item_rate_left">
+            <h3>aaaaaaaaa</h3>
+          </div>
+          <div class="article_item_rate_right">
+            <h3>bbbbbbbbb</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="article_item">
+        <h3 class="article_item_title"><%= @article.item5 %></h3>
+        <div class="article_item_rate">
+          <div class="article_item_rate_left">
+            <h3>aaaaaaaaa</h3>
+          </div>
+          <div class="article_item_rate_right">
+            <h3>bbbbbbbbb</h3>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="article_item">
-      <h3 class="article_item_title"><%= @article.item5 %></h3>
-      <div class="article_item_rate">
-        <div class="article_item_rate_left">
-          <h3>aaaaaaaaa</h3>
+    <div class="article_contributor_comment">
+      <p><%= @article.contributor_comment %></p>
+    </div>
+
+    <div class="article_viewer_comment">
+      <h3>コメント欄</h3>
+    </div>
+
+    <div class="article_footer">
+      <div class="article_footer_detail">
+        <%= image_tag 'default-avatar.png' %>
+        <div>
+          <p>shinta6348</p>
+          <p>2021/1/11</p>
         </div>
-        <div class="article_item_rate_right">
-          <h3>bbbbbbbbb</h3>
-        </div>
+      </div>
+      <div class="article_footer_heart">
+        <%= image_tag 'heart.svg' %>
       </div>
     </div>
 
   </div>
-
-  <div class="article_contributor_comment">
-    <p><%= @article.contributor_comment %></p>
-  </div>
-
-  <div class="article_viewer_comment">
-    <h3>コメント欄</h3>
-  </div>
-
-  <div class="article_footer">
-    <div class="article_footer_detail">
-      <%= image_tag 'default-avatar.png' %>
-      <div>
-        <p>shinta6348</p>
-        <p>2021/1/11</p>
-      </div>
-    </div>
-    <div class="article_footer_heart">
-      <%= image_tag 'heart.svg' %>
-    </div>
-  </div>
-
-
-</div>

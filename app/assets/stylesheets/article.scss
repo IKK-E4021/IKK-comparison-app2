@@ -12,6 +12,10 @@ $avatar-size: 32px;
     font-size: 20px;
     display: flex;
     justify-content: space-around;
+
+    &_vs {
+        padding: 8px 0 0 0;  
+    };
   };
 
   &_item {
@@ -29,6 +33,10 @@ $avatar-size: 32px;
 
   &_contributor_comment {
     margin-bottom: 30px;
+    &_input {
+      display: flex;
+      justify-content: space-around;      
+    };
   };
 
   &_viewer_comment {
