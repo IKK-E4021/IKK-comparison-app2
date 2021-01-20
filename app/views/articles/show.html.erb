@@ -76,6 +76,14 @@
       <p><%= @article.contributor_comment %></p>
     </div>
 
+    <div class="article_edit">
+      <%= link_to edit_article_path(@article) do %>
+        <div class="btn-primary">
+          <p>編集する</p>
+        </div>
+      <% end %>
+    </div>
+
     <div class="article_viewer_comment">
       <h3>コメント欄</h3>
     </div>
@@ -93,4 +101,4 @@
       </div>
     </div>
 
-  </div>
+</div>

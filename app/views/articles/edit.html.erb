@@ -5,8 +5,7 @@
     <% end %>
   </ul>
 
-  <%= form_with(model: @article, url: articles_path, method: 'post', local: true) do |f| %>
-    
+  <%= form_with(model: @article, url: article_path(@article), method: 'put', local: true) do |f| %>
     <div class="article_title">
       <div>
         <%= f.text_field :object_left, class: 'object' %>
