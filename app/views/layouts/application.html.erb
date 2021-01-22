@@ -13,8 +13,10 @@
 
   <body>
     <header>
-      <h1 class="title">ニタク！</h1>
-      <p class="subtitle">身近なものの比較サイト</p> 
+      <%= link_to root_path do %>
+        <h1 class="title">ニタク！</h1>
+        <p class="subtitle">身近なものの比較サイト</p> 
+      <% end %>
     </header>
     <% if flash.present? %>
       <div class="flash">

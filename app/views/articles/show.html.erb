@@ -77,11 +77,15 @@
     </div>
 
     <div class="article_edit">
-      <%= link_to edit_article_path(@article) do %>
-        <div class="btn-primary">
-          <p>編集する</p>
-        </div>
-      <% end %>
+      <div class="btn-primary">
+        <%= link_to '編集する', edit_article_path(@article) %>
+      </div>
+    </div>
+
+    <div class="article_delete">
+      <div class="btn-primary">
+        <%= link_to '削除する', article_path(@article), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' } %>
+      </div>
     </div>
 
     <div class="article_viewer_comment">
