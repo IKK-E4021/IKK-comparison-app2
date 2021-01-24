@@ -1,0 +1,54 @@
+.container
+  %ul
+    - @article.errors.full_messages.each do |message|
+      %li= message
+  = form_with(model: @article, local: true) do |f|
+    .article_title
+      %div
+        = f.text_field :object_left, class: 'object'
+      %h3.article_title_vs vs
+      %div
+        = f.text_field :object_right, class: 'object'
+    .article_item
+      .article_item_title
+        = f.text_field :item1, class: 'item'
+      .article_item_rate
+        .article_item_rate_left
+          %h3 aaaaaaaaa
+        .article_item_rate_right
+          %h3 bbbbbbbbb
+    .article_item
+      .article_item_title
+        = f.text_field :item2, class: 'item'
+      .article_item_rate
+        .article_item_rate_left
+          %h3 aaaaaaaaa
+        .article_item_rate_right
+          %h3 bbbbbbbbb
+    .article_item
+      .article_item_title
+        = f.text_field :item3, class: 'item'
+      .article_item_rate
+        .article_item_rate_left
+          %h3 aaaaaaaaa
+        .article_item_rate_right
+          %h3 bbbbbbbbb
+    .article_item
+      .article_item_title
+        = f.text_field :item4, class: 'item'
+      .article_item_rate
+        .article_item_rate_left
+          %h3 aaaaaaaaa
+        .article_item_rate_right
+          %h3 bbbbbbbbb
+    .article_item
+      .article_item_title
+        = f.text_field :item5, class: 'item'
+      .article_item_rate
+        .article_item_rate_left
+          %h3 aaaaaaaaa
+        .article_item_rate_right
+          %h3 bbbbbbbbb
+    .article_contributor_comment_input
+      = f.text_area :contributor_comment
+    = f.submit '保存', class: 'btn-primary'
