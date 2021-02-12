@@ -1,0 +1,10 @@
+%h2 Forgot your password?
+= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+  = render "devise/shared/error_messages", resource: resource
+  .field
+    = f.label :メールアドレス
+    %br/
+    = f.email_field :email, autofocus: true, autocomplete: "email", class: 'item'
+  .actions
+    = f.submit "再設定用のパスワードを送る", class: 'btn-primary'
+= render "devise/shared/links"
