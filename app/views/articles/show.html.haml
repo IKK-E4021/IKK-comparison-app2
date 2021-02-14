@@ -42,7 +42,7 @@
           %h3 bbbbbbbbb
   .article_contributor_comment
     %p= @article.contributor_comment
-  - if user_signed_in?  
+  - if user_signed_in? && current_user.has_written?(@article) 
     .article_edit
       .btn-primary
         = link_to '編集する', edit_article_path(@article)
@@ -55,7 +55,7 @@
     .article_footer_detail
       = image_tag 'default-avatar.png'
       %div
-        %p shinta6348
+        %p= @article.author_name
         %p= @article.display_created_at
     .article_footer_heart
       = image_tag 'heart.svg'

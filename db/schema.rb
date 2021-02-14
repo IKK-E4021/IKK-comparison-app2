@@ -10,19 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_24_201718) do
+ActiveRecord::Schema.define(version: 2021_01_13_115209) do
 
   create_table "articles", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "object_left"
-    t.string "object_right"
-    t.string "item1"
+    t.integer "user_id", null: false
+    t.string "object_left", null: false
+    t.string "object_right", null: false
+    t.string "item1", null: false
     t.string "item2"
     t.string "item3"
     t.string "item4"
     t.string "item5"
     t.text "contributor_comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
